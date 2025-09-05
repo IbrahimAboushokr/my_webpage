@@ -1,0 +1,220 @@
+:root
+{
+    --main-color:#FF9100;
+}
+.vport
+{
+    background: url(../img/homePage.jpg);
+    background-color: black;
+    background-size: cover;
+}
+.vport h2
+{
+    display: none;
+}
+.vport h1
+{
+    color: var(--main-color);
+    display: none;
+}
+.imgfox
+{
+    transform: scale(0.8);
+    transition:transform 1.5s;
+    display: none;
+}
+.imgfox:hover
+{
+    transform: scale(1.06);
+}
+.icon
+{
+    width: 50px;
+    height: 50px;
+}
+.linkfox a
+{
+    text-decoration: none;
+    transform: scale(0.95);
+    transition:transform 1s;
+    color: var(--main-color);
+    display: none;
+}
+.linkfox a :hover 
+{
+    transform: scale(1.06);
+    color: hwb(0 0% 100% / 0.925);
+}
+
+.text-prof
+{
+    font-size: xx-large;
+  
+}
+.logoibrahim
+{
+    font-size: larger;
+    color: #FF9100;
+}
+.fox-slider
+{
+    border-radius: 15px;
+}
+
+
+/* project final ........................................................*/
+
+.bgcolornav
+{
+ background-color: rgb(17, 22, 26);
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+.bgheadcover
+{
+    background-image: url(../img/home.jpg);
+    background-size: 100%100%;
+}
+.padSearch
+{
+   width: 70%;
+}
+
+
+.bgimport
+{
+    background-color: #b7eef0;
+    
+}
+.bgimport1
+{
+    background-color: #eef8f8;
+    
+}
+/* Center the search bar container */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 50%;
+    min-width: 200px;  /* Minimum width for smaller screens */
+    max-width: 600px;  /* Max width for larger screens */
+    border-radius: 4px;
+}
+
+
+
+    .stepContanierColor
+    {
+        background-color: #F4F6FF;
+    }
+
+    .copyRightColor
+    {
+        color: #0f6ac5;
+    }
+    .copyRightColor:hover {
+        color:rgb(5, 5, 5);
+        
+    }
+    .styleLogo
+    {
+        font-family: 'Edu QLD Beginner', cursive;
+    }
+    .myP{
+        display: none;
+    }
+
+#Contacts
+{
+    background-image: url(../img/bg\ service1.jpg);
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* .from-left {
+  opacity: 0;
+  transform: translateX(-120%);
+  transition: all 1.5s ease;
+}
+
+.from-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.icon-from-left {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.7s ease;
+}
+
+.icon-from-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+} */
+/* العناصر تظهر من اليسار */
+.from-left {
+  opacity: 0;
+  transform: translateX(-120%);
+  transition: all 1s ease;
+}
+
+.from-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* الأيقونات تظهر من اليسار بشكل أسرع */
+.icon-from-left {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.7s ease;
+}
+
+.icon-from-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* تحسين fade-in للكاردات والصور */
+.card img {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.card img.in-view {
+  opacity: 1;
+}
+
+.card-body {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.card-body.in-view {
+  opacity: 1;
+}
+
+/* لسكشن الاتصالات */
+#communication .col-12.col-md-6 div {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+#communication .col-12.col-md-6 div.in-view {
+  opacity: 1;
+}
