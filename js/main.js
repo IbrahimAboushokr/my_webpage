@@ -56,31 +56,31 @@ $(document).ready(function () {
       if (entry.isIntersecting && !aboutSectionShown) {
         aboutSectionShown = true;
         const aboutSection = $('#about');
-        aboutSection.removeClass('d-none').hide().fadeIn(1000, () => {
+        aboutSection.removeClass('d-none').hide().fadeIn(500, () => {
 
           // العنوان
           const h2 = $("#about h2");
           h2.removeClass("d-none").addClass("from-left");
-          setTimeout(() => h2.addClass("in-view"), 500);
+          setTimeout(() => h2.addClass("in-view"), 250);
 
           // الصورة
           setTimeout(() => {
             const img = $("#about img");
             img.removeClass("d-none").addClass("from-left");
-            setTimeout(() => img.addClass("in-view"), 500);
+            setTimeout(() => img.addClass("in-view"), 250);
 
             // البراجراف
             setTimeout(() => {
               const p = $("#about p");
               const text = p.text();
               p.text(text).removeClass("d-none").addClass("from-left");
-              setTimeout(() => p.addClass("in-view"), 500);
+              setTimeout(() => p.addClass("in-view"), 250);
 
               // بعد الأول نشغل الثاني
-              setTimeout(() => showContactsSection(), 2000);
-            }, 3000);
+              setTimeout(() => showContactsSection(), 1000);
+            }, 1500);
 
-          }, 3000);
+          }, 1500);
 
         });
         obs.unobserve(entry.target);
@@ -93,50 +93,50 @@ $(document).ready(function () {
   // دالة لإظهار السيكشن الثاني
   function showContactsSection() {
     const contactsSection = $('#contacts');
-    contactsSection.removeClass('d-none').hide().fadeIn(1500, () => {
+    contactsSection.removeClass('d-none').hide().fadeIn(750, () => {
 
       const h2 = contactsSection.find('h2');
       h2.removeClass('d-none').addClass('from-left');
-      setTimeout(() => h2.addClass('in-view'), 600);
+      setTimeout(() => h2.addClass('in-view'), 300);
 
       const mainP = contactsSection.find('p').first();
       const mainText = mainP.text();
       mainP.text(mainText).removeClass('d-none').addClass("from-left");
-      setTimeout(() => mainP.addClass('in-view'), 600);
+      setTimeout(() => mainP.addClass('in-view'), 300);
 
       const card = contactsSection.find('.col-lg-6 .card').first();
       const cardImg = card.find('img');
       const cardBody = card.find('.card-body');
 
       setTimeout(() => {
-        card.removeClass('d-none').hide().fadeIn(1000, () => {
+        card.removeClass('d-none').hide().fadeIn(500, () => {
           cardImg.removeClass('d-none').addClass('from-left');
-          setTimeout(() => cardImg.addClass('in-view'), 500);
+          setTimeout(() => cardImg.addClass('in-view'), 250);
 
           cardBody.removeClass('d-none').addClass('from-left');
-          setTimeout(() => cardBody.addClass('in-view'), 800);
+          setTimeout(() => cardBody.addClass('in-view'), 400);
 
           setTimeout(() => {
             const card2 = contactsSection.find('.col-lg-6 .card').last();
             const card2Body = card2.find('.card-body');
             const links = card2.find('.list-group a');
 
-            card2.removeClass('d-none').hide().fadeIn(1000, () => {
+            card2.removeClass('d-none').hide().fadeIn(500, () => {
               card2Body.removeClass('d-none').addClass('from-left in-view');
 
               links.each(function(index) {
                 const link = $(this);
                 link.removeClass('d-none').addClass('icon-from-left');
-                setTimeout(() => link.addClass('in-view'), 600 + index * 600);
+                setTimeout(() => link.addClass('in-view'), 300 + index * 300);
               });
 
-              setTimeout(() => showCommunicationSection(), 3000);
+              setTimeout(() => showCommunicationSection(), 1500);
             });
 
-          }, 2000);
+          }, 1000);
 
         });
-      }, 2000);
+      }, 1000);
 
     });
   }
@@ -144,40 +144,40 @@ $(document).ready(function () {
   // دالة لإظهار السيكشن الثالث
   function showCommunicationSection() {
     const commSection = $('#communication');
-    commSection.removeClass('d-none').hide().fadeIn(2000, () => {
+    commSection.removeClass('d-none').hide().fadeIn(1000, () => {
 
       const h2 = commSection.find('h2');
       h2.removeClass('d-none').addClass('from-left');
-      setTimeout(() => h2.addClass('in-view'), 800);
+      setTimeout(() => h2.addClass('in-view'), 400);
 
       const mainP = commSection.find('p').first();
       const mainText = mainP.text();
       mainP.text(mainText).removeClass('d-none').addClass('from-left');
-      setTimeout(() => mainP.addClass('in-view'), 800);
+      setTimeout(() => mainP.addClass('in-view'), 400);
 
       setTimeout(() => {
         const infoDiv = commSection.find('.col-12.col-md-6').first().find('div');
         infoDiv.removeClass('d-none').addClass('from-left');
-        setTimeout(() => infoDiv.addClass('in-view'), 1000);
-      }, 2000);
+        setTimeout(() => infoDiv.addClass('in-view'), 500);
+      }, 1000);
 
       setTimeout(() => {
         const mapDiv = commSection.find('.col-12.col-md-6').last().find('div');
         mapDiv.removeClass('d-none').addClass('from-left');
-        setTimeout(() => mapDiv.addClass('in-view'), 1500);
-      }, 3000);
+        setTimeout(() => mapDiv.addClass('in-view'), 750);
+      }, 1500);
 
-      setTimeout(() => showSliderSection(), 5000);
+      setTimeout(() => showSliderSection(), 2500);
     });
   }
 
   // دالة لإظهار السيكشن الرابع
   function showSliderSection() {
     const sliderSection = $('section.m-2');
-    sliderSection.removeClass('d-none').hide().fadeIn(2000, () => {
+    sliderSection.removeClass('d-none').hide().fadeIn(1000, () => {
       const carousel = sliderSection.find('#carouselExampleIndicators');
       carousel.removeClass('d-none').addClass('from-left');
-      setTimeout(() => carousel.addClass('in-view'), 1000);
+      setTimeout(() => carousel.addClass('in-view'), 500);
     });
   }
 
